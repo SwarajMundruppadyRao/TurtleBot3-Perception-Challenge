@@ -57,6 +57,41 @@ To run the simulation, please follow the following steps:
     ros2 run finalrun enpm673_final_proj_main
 ```
 
+## To run on a real TurtleBot3-waffle
+
+1. SSH into TurtleBot and run the following command:
+
+  ```bash
+    ros2 launch turtlebot3_bringup robot.launch.py
+  ```
+2. Set the ROS Domain ID to ensure that the system and TurtleBot is on the same network and also have the same ROS_DOMAIN_ID. The ROS_DOMAIN_ID can be set using the following command:
+   ```bash
+    export ROS_DOMAIN_ID=$domain_id$
+   ```
+
+3. Start the Horizon Line code using the following command to detect the horizon line
+
+```bash
+    ros2 run finalrun horizon
+```
+4. To start the motion detection using Optical flow, use the following command. The threshold was set according to the observations on out computer, kindly change the motion and angle threshold if required for efficient run in the environment
+
+```bash 
+    ros2 run finalrun optical_flow 
+```
+
+5. To start the stop sign detection use the following command. This will open a window in which a bounding box is drawn over the stop sign when detected.
+
+```bash
+    ros2 run finalrun stop_sign_detection
+```
+
+6. To start the paper trail following sequence use the following command and view the trail following on the pop up window
+
+```bash
+    ros2 run finalrun enpm673_final_proj_main
+```
+
 
 
 
