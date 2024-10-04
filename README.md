@@ -9,7 +9,7 @@ This repository contains the code for ENPM673 Final Project. Implementation of a
 - Swaraj Mundruppady Rao (120127007)
 
 ## Requirements 
--  TurtleBot3
+-  TurtleBot3 Waffle
 -  ROS2 Humble
 -  OpenCV library
 
